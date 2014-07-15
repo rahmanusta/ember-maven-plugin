@@ -1,0 +1,7 @@
+{
+  "name": "ember-maven-plugin",
+  "version": "0.0.0",
+  "dependencies": {
+    "ember-template-compiler": "*"
+  }
+}
