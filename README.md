@@ -37,4 +37,9 @@ Compiles Ember templates and combines them single JavaScript source as output
     <url>http://dl.bintray.com/rahmanusta/maven</url>
 </repository>
 ```
+
+## Requirements
+
+* Needs Java 8+
+
 [![Analytics](https://ga-beacon.appspot.com/UA-52823012-1/ember-maven-plugin/readme)](https://github.com/rahmanusta/ember-maven-plugin)
