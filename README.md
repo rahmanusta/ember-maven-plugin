@@ -34,7 +34,7 @@ Compiles Ember templates and combines them single JavaScript source as output
 		<name>bintray</name>
 		<url>http://dl.bintray.com/rahmanusta/maven</url>
 	</pluginRepository>
-</pluginRepositories>
+</pluginRepositories>```
 
 ## Requirements
 
