@@ -28,15 +28,13 @@ Compiles Ember templates and combines them single JavaScript source as output
 ## Repository
 
 ```xml
-<repository>
-    <snapshots>
-        <enabled>false</enabled>
-    </snapshots>
-    <id>central</id>
-    <name>bintray</name>
-    <url>http://dl.bintray.com/rahmanusta/maven</url>
-</repository>
-```
+<pluginRepositories>
+	<pluginRepository>
+		<id>bintray-central</id>
+		<name>bintray</name>
+		<url>http://dl.bintray.com/rahmanusta/maven</url>
+	</pluginRepository>
+</pluginRepositories>
 
 ## Requirements
 
