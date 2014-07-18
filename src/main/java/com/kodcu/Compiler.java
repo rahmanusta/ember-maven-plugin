@@ -60,20 +60,20 @@ public class Compiler extends AbstractMojo {
         engine.eval("var exports = {}");
         engine.eval(IOHelper.toString("/node_modules/ember-template-compiler/vendor/ember-template-compiler.js"));
 
-        System.out.println("Template path: "+templatePath);
-        System.out.println("Output path: "+outputPath);
+        getLog().info("Template path: "+templatePath);
+        getLog().info("Output path: "+outputPath);
 
         Path templatePathh = Paths.get(templatePath);
         Path outputPathh = Paths.get(outputPath);
 
         Stream<Path> templateStream = Files.walk(templatePathh);
 
-        System.out.println("...Started Ember Template Compiling...");
+        getLog().info("...Started Ember Template Compiling...");
         templateStream
                 .filter(path -> !Files.isDirectory(path))
                 .filter(path -> matcher.matches(path))
                 .forEach(path -> {
-                    System.out.println("Compiling: " + path);
+                    getLog().info("Compiling: " + path);
                     String template = new String(IOHelper.readAllBytes(path), Charset.forName("UTF-8"));
                     template = template.replace("\n", "").replace("\r", "").replace("\"", "'");
                     BiConsumer<String, Path> combiner = this::combine;
@@ -85,7 +85,7 @@ public class Compiler extends AbstractMojo {
             bufferedWriter.write(templateBuffer.toString());
         }
 
-        System.out.println("...Completed Ember Template Compiling...");
+        getLog().info("...Completed Ember Template Compiling...");
     }
 
     public void combine(String template, Path path) {
