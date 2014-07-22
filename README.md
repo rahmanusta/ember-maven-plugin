@@ -14,14 +14,6 @@ Compiles Ember templates and combines them single JavaScript source as output
         <templatePath>${project.basedir}/src/main/resources/templates</templatePath>
         <outputPath>${project.basedir}/src/main/resources/templates/output.js</outputPath>
     </configuration>
-    <executions>
-        <execution>
-            <phase>compile</phase>
-            <goals>
-                <goal>precompile</goal>
-            </goals>
-        </execution>
-    </executions>
 </plugin>
 ```
 
